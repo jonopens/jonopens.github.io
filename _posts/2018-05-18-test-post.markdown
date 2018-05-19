@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Test Post"
 date:   2018-05-18 14:39:48 -0400
 categories: jekyll update
 permalink: /blog/made-up-url.html
