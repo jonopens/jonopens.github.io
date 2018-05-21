@@ -363,20 +363,6 @@ Full-Width Styles
   background: #212121;
 }
 
-#logo {
-  margin: 20px 20px 0 20px;
-}
-
-#logo img {
-  border: 0;
-
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -o-box-shadow: none;
-  -ms-box-shadow: none;
-}
-
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
@@ -483,4 +469,37 @@ Small Device Styles
     font-size: 11px;
   }
 
+}
+
+/*******************************************************************************
+Custom Styles
+*******************************************************************************/
+
+#logo {
+  margin: 20px 20px 0 20px;
+}
+
+#logo img {
+  border: 0;
+
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  -ms-box-shadow: none;
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+}
+
+.post-meta {
+  font-size: 14px;
+  color: #828282;
+}
+
+.post-link {
+  display: block;
+  font-size: 24px;
 }
