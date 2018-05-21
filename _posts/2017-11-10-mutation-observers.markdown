@@ -7,7 +7,7 @@ date: 2017-11-10T08:00:01Z
 categories: javascript
 permalink: /blog/monitoring-changes-with-mutation-observers.html
 excerpt: "Quick overview of the built-in JavaScript MutationObserver object type and how to use it."
-redirect-from: "/tests/mutation-observer-test.html"
+redirect_from: "/tests/mutation-observer-test.html"
 
 ---
 
