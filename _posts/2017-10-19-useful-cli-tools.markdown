@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "What Are Some Useful Unix CLI Tools on Mac OS X?"
+title:  Useful Unix CLI Applications with Examples
+h1: What Are Some Useful Unix CLI Tools on Mac OS X?
 description: A summary of common command line tools that can make life easier and accomplish common tasks. Work smart, not hard!
 date_string:   "October 19, 2017"
 categories: cli terminal macosx

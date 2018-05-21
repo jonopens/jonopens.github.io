@@ -6,7 +6,9 @@ layout: home
 title: "Jon Openshaw: Experienced SEO & Full Stack Web Developer"
 h1: "Hi, I'm Jon Openshaw."
 description: "Personal site and blog of Jon Openshaw. Topics covered will range from web development to SEO to anecdotes on work/life. Thanks for stopping by!"
-redirect_from: "/post-list.html"
+redirect_from:
+  - "/post-list.html"
+  - "/tests/"
 
 ---
 

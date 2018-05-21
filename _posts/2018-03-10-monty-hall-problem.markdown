@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "Testing Out the Monty Hall Problem in JS"
+title:  A Proof of the Monty Hall Problem in JS
+h1: The Monty Hall Problem in JavaScript
 description: My goal was to prove out the Monty Hall Problem in JavaScript.
 date_string:   "March 10, 2018"
 categories: javascript
