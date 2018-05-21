@@ -3,7 +3,7 @@ layout: post
 title: MutationObserver & Monitoring Changes to the DOM
 h1: Change Monitoring with JavaScript MutationObserver Objects
 description: MutationObserver objects can be useful to act after changes are made to the DOM.
-date_string: "November 10, 2017"
+date: 2017-11-10T08:00:01Z
 categories: javascript
 permalink: /blog/monitoring-changes-with-mutation-observers.html
 excerpt: "Quick overview of the built-in JavaScript MutationObserver object type and how to use it."

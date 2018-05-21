@@ -3,7 +3,7 @@ layout: post
 title:  Simple Bubble Chart in D3.js
 h1: Bubble Chart with Simulated Forces in D3.js
 description: Quick guide on getting a simple bubble chart set up in D3.js.
-date_string: "October 20, 2017"
+date: 2017-10-20T08:00:01Z
 categories: javascript data
 permalink: /blog/testing-d3-bubble-chart.html
 excerpt: "I have a background in analytics and data visualization, so I made a bubble chart in D3."

@@ -3,7 +3,7 @@ layout: post
 title: Parsing XML Sitemaps with Nokogiri & Open-URI in Ruby
 h1: Parsing XML Sitemaps in Ruby with Nokogiri
 description: Before digging into a larger project of transitioning an old BASH script of mine to Ruby, I wanted to get familiar with Nokogiri
-date_string: "September 9, 2017"
+date: 2017-09-12T08:00:00Z
 categories: ruby xml
 permalink: /blog/parsing-xml-sitemaps-with-nokogiri.html
 excerpt: "A short primer on how to consume XML sitemaps in Ruby using the Nokogiri gem and get at the good stuff."

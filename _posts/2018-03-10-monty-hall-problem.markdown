@@ -3,7 +3,7 @@ layout: post
 title:  A Proof of the Monty Hall Problem in JS
 h1: The Monty Hall Problem in JavaScript
 description: My goal was to prove out the Monty Hall Problem in JavaScript.
-date_string:   "March 10, 2018"
+date: 2018-03-10T08:00:01Z
 categories: javascript
 permalink: /blog/the-monty-hall-problem.html
 excerpt: "After an unexpected reintroduction to the Monty Hall Problem, I try to test its premise in JavaScript."

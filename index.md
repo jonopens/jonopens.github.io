@@ -12,7 +12,7 @@ redirect_from:
 
 ---
 
-I'm an SEO with over 10 years of experience. I've managed the SEO programs at XO Group, Inc. (formerly The Knot) and 1stdibs.com. My specialties are technical and content SEO for startups and early growth stage companies. Please email  __jon < @ > jonopens.com__ if you want to talk [SEO services](/services.html).
+I'm an SEO with over 10 years of experience. I've managed the SEO programs at XO Group, Inc. (formerly The Knot) and 1stdibs.com. My specialties are strategic SEO, particularly technical and content SEO, for startups and early growth stage companies. Please email  __jon < @ > jonopens.com__ if you want to talk [SEO services](/services.html).
 
 After years of tinkering with Bash scripts and Python, I decided to pivot to software engineering in 2017. I applied to the Immersive Web Development program at Flatiron School and was accepted. I graduated at the end of 2017.
 
