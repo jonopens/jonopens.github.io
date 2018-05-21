@@ -7,7 +7,7 @@ date_string: "November 10, 2017"
 categories: javascript
 permalink: /blog/monitoring-changes-with-mutation-observers.html
 excerpt: "Quick overview of the built-in JavaScript MutationObserver object type and how to use it."
-redirect-from: "/mutation-observer-test.html"
+redirect-from: "/tests/mutation-observer-test.html"
 
 ---
 
