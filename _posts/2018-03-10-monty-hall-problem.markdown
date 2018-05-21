@@ -2,10 +2,10 @@
 layout: post
 title:  "Testing Out the Monty Hall Problem in JS"
 description: My goal was to prove out the Monty Hall Problem in JavaScript.
-date_string:   "October 19, 2017"
-categories: cli terminal macosx
-permalink: /blog/useful-cli-applications.html
-excerpt: "A brief primer on some common Unix command line tools. Super beginner level."
+date_string:   "March 10, 2018"
+categories: javascript
+permalink: /blog/the-monty-hall-problem.html
+excerpt: "After an unexpected reintroduction to the Monty Hall Problem, I try to test its premise in JavaScript."
 ---
 
 You probably didn't know, but I love video games, and it's one of the reasons I decided to learn to program in the first place. It should come as no surprise that I consume just about anything related to games - videos, articles, disappointment in endless cycles of ports of old games to new platforms. Interestingly, it was during a YouTube video of a guy who goes by CarlSagan42 that I was reintroduced to the Monty Hall Problem - in this case, in the form of a [Super Mario Maker level](https://www.youtube.com/watch?v=otDNr4kSnAs) - and became curious on how I could demonstrate it with code.
