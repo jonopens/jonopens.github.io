@@ -47,7 +47,7 @@ body {
   box-sizing: border-box;
   color:#373737;
   background: #212121;
-  font-size: 16px;
+  font-size: 20px;
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -143,15 +143,6 @@ img {
   -moz-box-shadow: 0 0 5px #ebebeb;
   -o-box-shadow: 0 0 5px #ebebeb;
   -ms-box-shadow: 0 0 5px #ebebeb;
-}
-
-p img {
-  display: inline;
-  margin: 0;
-  padding: 0;
-  vertical-align: middle;
-  text-align: center;
-  border: none;
 }
 
 pre, code {
@@ -475,6 +466,16 @@ Small Device Styles
 Custom Styles
 *******************************************************************************/
 
+p img {
+  display: block;
+  margin: 0 auto;
+  /* updated above: inline > block, 0 > 0 auto */
+  padding: 0;
+  vertical-align: middle;
+  text-align: center;
+  border: none;
+}
+
 #logo {
   margin: 20px 20px 0 20px;
 }
@@ -506,4 +507,8 @@ Custom Styles
 
 .post-list > li {
   margin-bottom: 30px;
+}
+
+.inline-it {
+  display: inline;
 }
