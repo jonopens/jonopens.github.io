@@ -6,7 +6,7 @@ description: Before digging into a larger project of transitioning an old BASH s
 date: 2017-09-12T08:00:00Z
 categories: ruby xml
 permalink: /blog/parsing-xml-sitemaps-with-nokogiri.html
-excerpt: "A short primer on how to consume XML sitemaps in Ruby using the Nokogiri gem and get at the good stuff."
+excerpt: "A short guide on how to consume XML sitemaps in Ruby using the Nokogiri gem and get at the good stuff."
 ---
 
 As an SEO of over 10 years, I'm always looking for shortcuts to getting data faster about the website I'm working on. XML sitemaps are one of the easiest ways to collect all the relevant URLs about a site you could want, so it can be a good use of time to explore and extract data from them. I've written scripts to collect URLs before but not in Ruby.
