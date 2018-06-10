@@ -8,17 +8,6 @@ categories: development
 permalink: /blog/fear-of-becoming-web-developer.html
 excerpt: "I've never done anything as rewarding, or as reckless, as making the jump to programming/development/software engineering, but it's worth it to be the source of your own momentum, even if just for a bit."
 ---
-<!-- OUTLINE
-  - fear is the enemy; fear is the mind killer
-  - making a decision isn't an on/off switch; it's a dimmer switch
-  - getting the tools is only half the battle (you still need a job)
-  - you can't expel your feelings unless you can express them  
-    - sometimes you won't know what you feel
-    - it's okay to fail, it's not okay to give up
-    - self-sabotage is inches away
-  - the catharsis of achievement
-  - the future, new fears and the unknown as the goal
--->
 
 On May 25, 2018, I received some important news. Nearly a year after making the decision to pursue code, after waving goodbye to my old life, after joining Flatiron School's Web Development Immersive, I had finally received and accepted a job as a web developer. 
 
