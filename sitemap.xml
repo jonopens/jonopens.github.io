@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://www.jonopens.com/</loc>
+    <lastmod>2018-03-09</lastmod>
+  </url>
+  <url>
+    <loc>http://www.jonopens.com/blog/monitoring-changes-with-mutation-observers.html</loc>
+    <lastmod>2018-03-10</lastmod>
+  </url>
+  <url>
+    <loc>http://www.jonopens.com/blog/parsing-xml-sitemaps-with-nokogiri.html</loc>
+    <lastmod>2018-03-10</lastmod>
+  </url>
+  <url>
+    <loc>http://www.jonopens.com/blog/useful-cli-applications.html</loc>
+    <lastmod>2018-03-10</lastmod>
+  </url>
+  <url>
+    <loc>http://www.jonopens.com/blog/testing-d3-bubble-chart.html</loc>
+    <lastmod>2018-03-10</lastmod>
+  </url>
+  <url>
+    <loc>http://www.jonopens.com/blog/the-monty-hall-problem.html</loc>
+    <lastmod>2018-05-20</lastmod>
+  </url>
+  <url>
+    <loc>http://www.jonopens.com/blog/fear-of-becoming-web-developer.html</loc>
+    <lastmod>2018-06-10</lastmod>
+  </url>
+</urlset>
