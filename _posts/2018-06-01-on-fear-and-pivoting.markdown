@@ -31,35 +31,37 @@ For the sake of organization, I've broken down this post into subsections that r
 
 (For the record, I've never read Dune. I imagine this is anathema to some of you, and for that I am sorry.)
 
-Before Flatiron School, I was a moderately successful SEO. I'd been part of large projects at amazing companies, worked in just about every area of search (except link-building, nooooo thank you), and generally felt I did my job well. So even though I was not satisfied with where my career, deciding to leave it was not an easy choice and it scared the heck out of me to just leave behind a career of over 10 years.
+Before Flatiron School, I was a moderately successful SEO. I'd been part of large projects at amazing companies, worked in just about every area of search (except link-building, nooooo thank you), and generally felt I did my job well. So even though I was not satisfied with where my career was, deciding to leave it was not an easy choice and it scared the heck out of me to just dump 10 years of progress.
 
 <img src="http://christianheilmann.com/wp-content/uploads/2014/04/fear-harry-potter.gif" alt="fear makes us act weird">
 
-At the same time, I was afraid of a future that left me feeling unfulfilled and bored. To my way of thinking, both then and now, SEO was a bit of a deadend. I enjoyed the part of my job that involved solving problems but found myself more an evangelist, communicator and presenter as I progressed in the field. I didn't relish the need for some sort of political acumen. It was **work** I wanted to do, and more and more, SEO was feeling like _work_ - the four letter word kind.
+At the same time, I was afraid of a future that left me feeling unfulfilled and bored. To my way of thinking, both then and now, SEO was a bit of a deadend and the chances to learn seemed fewer and further between. I enjoyed the part of my job that involved solving problems but found myself more an evangelist, communicator and presenter as I progressed in the field. I didn't relish the need for some sort of political acumen. It was **work** I wanted to do, and more and more, SEO was feeling like _work_ - the four letter word kind.
 
-My conflicting fears left me in a place you might be familiar with: impasse. Complete decision-making shutdown. 
+My conflicting fears pushed me towards a place you might be familiar with: impasse. Complete decision-making shutdown. 
 
-For nearly three years, I toyed with the idea and backed away, dabbling with code in my spare time but never committing. I was afraid of the change, and it was making me do dumb things like not taking a risk. That's a regret I carry with me now. 
+For nearly three years, I toyed with the idea and backed away, dabbling with code in my spare time but never committing. I was afraid of the change, and it was making me do dumb things like not taking risks. That's a regret I carry with me now. 
 
 Fear is normal and even okay, but who says we have to let it shut down the voice in our heart that says "what if" and dares us to push onward? If I can volunteer one piece of advice from this experience, it is this:
 
 **DO NOT LISTEN TO YOUR FEAR! MOVE IF YOU ARE UNHAPPY WHERE YOU ARE!** 
 
-We have to evolve to grow as people and sitting still is a recipe for stagnation. It's move, adapt or die, and although I'm still scared now, at least I can feel the momentum as I move forward toward a goal.
+++CUE SELF-HELP VOICE++ We have to evolve to grow as people and sitting still is a recipe for stagnation. It's move, adapt or die, and although I'm still scared now, at least I can feel the momentum as I move forward toward a goal.
 
 ## Making a Decision Isn't an On/Off Switch, It's a Dimmer
 
 <img src="https://cdn.dribbble.com/users/49977/screenshots/2331537/switch.gif" alt="on off switch" height="400px">
 
-Maybe the subheading here is a little stupid sounding, but it hopefully represents the hesitation, trepidation, and various other -ation words that are built into complicated decision-making. What I want to approximate is the feeling of constantly shifting land beneath your feet. When you're making these decisions, a simple "yes" or "no" can feel impossible to arrive at. 
+Maybe the subheading here is a little stupid sounding, but it hopefully represents the hesitation, trepidation, and various other -ation words that are built into complicated decision-making. What I want to approximate is the feeling of constantly shifting land beneath your feet. When you're making these decisions, a simple "yes" or "no" can feel impossibly far away.
 
-For me, the start of Flatiron School felt that way. Every day, I questioned my motives, my resolve, everything. And every day, I had to remind myself of the reasons for my decision to pursue code. Every day, my wife would cheer me on, lovingly pushing me in her way. Every day, my cohortmates and my instructors were there to remind me, too. There was an amazing support network there for me, and all I had to do was reach out for it.
+And that's how I felt at the start of Flatiron School. Every day, I questioned my motives, my resolve, everything. Every day, I had to remind myself of the reasons for my decision to pursue code. Every day, my wife would cheer me on, lovingly coaxing me ahead. Every day, my cohortmates and my instructors were there to remind me, too. There was an amazing support network there for me, and all I had to do was reach out and take heart.
 
-In truth, even with the support network in place, the results varied. Some days I was almost certain I had made the right move. Some days, especially when I struggled and lost a lot of sleep, the whole thing felt futile and stupid and me along with it. Rarely if ever did I settle on a solid "yes" until graduation.
+I'd love to say it was that easy, but in truth, even with the support network in place, it was best to take it one day at a time. 
+
+Some days I was almost certain I had made the right move. Some days, especially when I struggled and lost a lot of sleep, the whole thing felt futile and stupid and me along with it. Rarely if ever did I settle on a solid "yes" until graduation.
 
 <img src="https://78.media.tumblr.com/946ef06bba7ca58d17542f2d920632c7/tumblr_nnv4r72uIV1upaq91o2_500.gif" alt="I thought I was doing the right thing">
 
-I think it's normal to feel a sort of "buyer's remorse" for deciding on code and pivoting away from the familiar. It's normal to question yourself, too. For me, that was part of the process of realizing I really could learn to code. It's also part of my process, and yours may be different.
+I think it's normal to feel a sort of "buyer's remorse" for deciding on code and pivoting away from the familiar. It's normal to question yourself, too. For me, that was part of the process of realizing I really could learn to code. It's also part of my process, and yours may be different, but I needed to bring doubts forward and then crush them with my effort.
 
 The point is, unsteady ground doesn't feel great to stand on, but you can do it, especially with the help of those around you. Don't give up and rely on the people that you care about (and that care about you!).
 
