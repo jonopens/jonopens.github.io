@@ -118,17 +118,27 @@
       "Jumping over spikes (2-high corridor)",
       "Semisolid over munchers",
       "Spike maze",
-      "coin trail"
+      "coin trail",
+      "Spin jumping with bob-omb",
+      "Duck jumping on beetles",
+      "Line of POW blocks",
+      "P-Switch Jump",
+      "Triple Jump Markers, but not required",
+      "Janky",
+      "POW to kill muncher",
+      "10+ seconds left",
+      "Run left at the start",
+      "Big shell opens path",
+      "Buttslam + conveyor path"
     ];
 
     function randomizeCards ( array ) {
       let newArray = [];
-      let clonedArray = array.slice();
 
       for ( var i = 0; i < array.length; i++ ) {
-        let rando = Math.floor( Math.random() * clonedArray.length )
-        newArray.push( clonedArray[rando] )
-        clonedArray.splice( rando, 1 )
+        let rando = Math.floor( Math.random() * array.length )
+        newArray.push( array[rando] )
+        array.splice( rando, 1 )
       }
 
       newArray.splice( 12, 0, "Wall Jumps" );
