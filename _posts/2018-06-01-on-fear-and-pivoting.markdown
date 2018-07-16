@@ -86,15 +86,15 @@ Cheesy as it may sound, after months of effort (and years of dreaming about it),
 This is recent. I'm still not sure how I feel, all told, but there a few things that I can share.
 
 
-1. **Self-sabotage is always inches away.**
+- **Self-sabotage is always inches away.**
 
 The decision to drop your old life isn't an easy one, and that means the desire to turn back is a tag-along. We don't have to listen, but acknowledging that you want to run away is valuable.
 
-2. **Failing is kinda part of the deal, and that's okay.**
+- **Failing is kinda part of the deal, and that's okay.**
 
 Trite, no? We have to fail to learn why we failed to begin with, and programming encourages failure to a degree. How else can we discover what code is brittle or what design choices don't make sense? I fail a lot and imagine it'll keep on going that way, but that's okay. You can't shy away from it.
 
-3. **I'm still afraid, even in the face of achievement.** 
+- **I'm still afraid, even in the face of achievement.** 
 
 The main difference now is I'll be afraid of letting my new teammates down and letting myself down in the process. I want to be a great developer, you know? A smart one that puts out well-tested code, keeps learning, encourages people to do awesome things, and can help others grow all the while. That's no small goal, I imagine, and that's scary. Scary can sure be exciting, though :)
 
