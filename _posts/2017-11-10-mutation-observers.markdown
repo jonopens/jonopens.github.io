@@ -63,7 +63,7 @@ let conf = {
 
 The [MDN documentation on MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver#MutationObserverInit#MutationObserverInit) indicates that you need to have one of the first three keys present and set to true in the "conf" (MutationObserverInit) object above set to true or else it won't be valid. Without one of those tree, a TypeError is thrown.
 
-<iframe src="https://www.youtube.com/embed/pC6QUerHk6o" frameborder="0" allowfullscreen="" class="center-block"></iframe>
+<iframe src="https://www.youtube.com/embed/pC6QUerHk6o" frameborder="0" allowfullscreen="" class="center-block" width="100%" height="320"></iframe>
 
 To start observing, we pass in the target and conf to the .observe method of the instance we created. Once that has happened without incident, we can see the MutationRecords as they are logged to the browser console (at least in my current callback function, that is).
 
