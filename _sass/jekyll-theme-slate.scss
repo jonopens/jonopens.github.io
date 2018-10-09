@@ -47,8 +47,8 @@ body {
   box-sizing: border-box;
   color:#373737;
   background: #212121;
-  font-size: 20px;
-  font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  font-family: serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -366,7 +366,7 @@ Small Device Styles
 
 @media screen and (max-width: 480px) {
   body {
-    font-size:14px;
+    font-size:22px;
   }
 
   #downloads {
@@ -379,7 +379,55 @@ Small Device Styles
   }
 
   #project_title {
-  font-size: 32px;
+  font-size: 30px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  h6 {
+    font-size: 12px;
+  }
+
+  code, pre {
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    font-size:20px;
+  }
+
+  #downloads {
+    display: none;
+  }
+
+  .inner {
+    min-width: 240px;
+    max-width: 320px;
+  }
+
+  #project_title {
+  font-size: 28px;
   }
 
   h1 {
@@ -399,55 +447,7 @@ Small Device Styles
   }
 
   h5 {
-    font-size: 14px;
-  }
-
-  h6 {
-    font-size: 12px;
-  }
-
-  code, pre {
-    font-size: 11px;
-  }
-
-}
-
-@media screen and (max-width: 320px) {
-  body {
-    font-size:14px;
-  }
-
-  #downloads {
-    display: none;
-  }
-
-  .inner {
-    min-width: 240px;
-    max-width: 320px;
-  }
-
-  #project_title {
-  font-size: 28px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  h2 {
-    font-size: 21px;
-  }
-
-  h3 {
-    font-size: 18px;
-  }
-
-  h4 {
-    font-size: 16px;
-  }
-
-  h5 {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   h6 {
@@ -457,7 +457,7 @@ Small Device Styles
   code, pre {
     min-width: 240px;
     max-width: 320px;
-    font-size: 11px;
+    font-size: 14px;
   }
 
 }

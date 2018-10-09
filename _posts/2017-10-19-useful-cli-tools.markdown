@@ -10,7 +10,7 @@ excerpt: "A brief primer on some common Unix command line tools. Super beginner 
 ---
 Knowing the right tools for a job is an important part of performing any task, but it can be critical to performing a task efficiently in programming and data manipulation.
 
-<iframe class="center-block" src="https://giphy.com/embed/lJDLy8JXZwkBa" width="480" height="397" frameborder="0" kwframeid="1"></iframe>
+<img src="https://media1.tenor.com/images/92e21cacf78ad39c1027e633c289d19a/tenor.gif?itemid=12003314" alt="wheelbarrow dump" style="max-width: 518px; background-color: rgb(63, 63, 63);">
 
 This article will seek to pull together some common and useful command line tools that you may or may not know about, specifically on Mac OS X. For the record, as of this writing, I am running Mac OS X Sierra on a MacBook Air. Onward!
 
@@ -121,6 +121,6 @@ I put this one here because it could be useful for measuring optimizations in co
 
 Even though I covered a few different useful CLI tools, this isn't the half of what's available and possible. I had more I wanted to write about! There's even an entire programming language, awk, built into most Unix systems just for processing text files. Madness.
 
-<iframe class="center-block" src="https://giphy.com/embed/xT5LMJCSCZybwZCaXK" width="480" height="362" frameborder="0" allowfullscreen="" kwframeid="2"></iframe>
+<img src="https://media1.tenor.com/images/f750bb9b61798f26049906e81aee7752/tenor.gif?itemid=4247101" alt="Homer Simpson goes bananas" style="background-color: rgb(96, 116, 97);">
 
 Anyway, the point is, there's a lot of love in the terminal and shell of your choice. Enjoy and explore!
