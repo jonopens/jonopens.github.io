@@ -136,13 +136,6 @@ img {
   max-width: 739px;
   padding: 5px;
   margin: 10px 0 10px 0;
-  border: 1px solid #ebebeb;
-
-  box-shadow: 0 0 5px #ebebeb;
-  -webkit-box-shadow: 0 0 5px #ebebeb;
-  -moz-box-shadow: 0 0 5px #ebebeb;
-  -o-box-shadow: 0 0 5px #ebebeb;
-  -ms-box-shadow: 0 0 5px #ebebeb;
 }
 
 pre, code {
@@ -411,12 +404,16 @@ Custom Styles
 *******************************************************************************/
 
 nav {
-  margin: 31px;
+  margin: 24px;
   float: right;
   text-align: center;
   color: #f2f2f2;
-  font-family: sans-serif;
-  font-size: 22px;
+  font: bold 22px 'Palatino', serif;
+}
+
+nav a img {
+  margin: 0;
+  border: 0;
 }
 
 p img {
@@ -468,4 +465,5 @@ p img {
 
 .nav-link {
   font-size: 22px;
+  margin-right: 6px;
 }
