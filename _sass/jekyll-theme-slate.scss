@@ -441,7 +441,6 @@ p img {
 
 #logo img {
   border: 0;
-
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -452,6 +451,8 @@ p img {
 .links {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  align-items: flex-end;
 }
 
 .post-list {
