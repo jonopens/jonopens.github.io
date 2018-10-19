@@ -257,6 +257,8 @@ Full-Width Styles
   background: -ms-linear-gradient(top, #373737, #212121);
   background: -o-linear-gradient(top, #373737, #212121);
   background: linear-gradient(to top, #373737, #212121);
+  display: flex;
+  flex-direction: row;
 }
 
 #header_wrap .inner {
@@ -404,11 +406,17 @@ Custom Styles
 *******************************************************************************/
 
 nav {
-  margin: 24px;
-  float: right;
-  text-align: center;
+  margin: 25px 24px 25px 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   color: #f2f2f2;
   font: bold 22px 'Palatino', serif;
+}
+
+nav a {
+  height: 42px;
+  margin: 0 6px;
 }
 
 nav a img {
@@ -427,7 +435,8 @@ p img {
 
 #logo {
   padding: 20px 0 0 20px;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
 }
 
 #logo img {
@@ -438,6 +447,11 @@ p img {
   -moz-box-shadow: none;
   -o-box-shadow: none;
   -ms-box-shadow: none;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
 }
 
 .post-list {
@@ -464,6 +478,6 @@ p img {
 }
 
 .nav-link {
-  font-size: 22px;
-  margin-right: 6px;
+  font-size: 21px;
+  margin: 12px 12px 0 0;
 }
