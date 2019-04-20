@@ -65,7 +65,7 @@ The [MDN documentation on MutationObserver](https://developer.mozilla.org/en-US/
 
 <iframe src="https://www.youtube.com/embed/pC6QUerHk6o" frameborder="0" allowfullscreen="" class="center-block" width="100%" height="320"></iframe>
 
-To start observing, we pass in the target and conf to the .observe method of the instance we created. Once that has happened without incident, we can see the MutationRecords as they are logged to the browser console (at least in my current callback function, that is).
+To start observing, we pass in the target and conf to the `.observe` method of the instance we created. Once that has happened without incident, we can see the MutationRecords as they are logged to the browser console (at least in my current callback function, that is).
 
 If we wanted to unbind the observer, effectively killing it, we would only need to call:
 
