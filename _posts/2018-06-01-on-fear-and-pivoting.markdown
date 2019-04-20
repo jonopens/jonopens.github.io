@@ -102,6 +102,6 @@ The main difference now is I'll be afraid of letting my new teammates down and l
 
 ## Finally
 
-If for any reason something in here resonates with you, please don't hesitate to reach out to me. A DM on [my Twitter](https://twitter.com/jonopens) is probably the easiest way. And while I can't guarantee to be anything more than a sympathetic ear, listening is often enough to let a speaker clarify their feelings and maybe even temper their resolve.
+If for any reason something in here resonates with you, please don't hesitate to reach out to me. Hit me up on [LinkedIn](https://www.linkedin.com/in/jopenshaw/) And while I can't guarantee to be anything more than a sympathetic ear, listening is often enough to let a speaker clarify their feelings and maybe even temper their resolve.
 
 Thank you for reading.

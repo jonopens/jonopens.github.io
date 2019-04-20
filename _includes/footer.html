@@ -1,5 +1,36 @@
-<div id="footer_wrap" class="outer">
-  <footer class="inner">
-    <p class="rss-subscribe">Site maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}.</a> Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  </footer>
-</div>
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">
+            {%- if site.author -%}
+            {{ site.author | escape }}
+            {%- else -%}
+            {{ site.title | escape }}
+            {%- endif -%}
+          </li>
+          {%- if site.email -%}
+          <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {%- endif -%}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        {%- include social.html -%}
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>
+          This site is a place for me to share. It pulls together things I’ve learned, built, or been inspired by. Occasionally,
+          I’ll write about personal things.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
