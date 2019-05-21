@@ -3,7 +3,7 @@ layout: post
 title:  "React Disco Floor Fever: Making a Disco Floor App"
 h1: Making a React Disco Floor Maker
 description: "At the end of last year, I had the idea to make a Disco Floor making app. I finally got around to completing the first version. It's missing a lot but I've enjoyed it a ton and wanted to pull some thoughts together on it."
-date: 2018-06-01T08:00:01Z
+date: 2019-05-20T08:00:01Z
 categories: development
 permalink: /blog/react-disco-floor-app.html
 excerpt: "A disco floor app I'm working on that has no real rhyme or reason other than it seemed like an interesting challenge. Just finished what I would call version 1.0.0 and taking a break for a bit."
