@@ -19,7 +19,7 @@ author: Jon Openshaw
 description: >- # this means to ignore newlines until "baseurl:"
   Experienced SEO & Full Stack Web Developer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.jonopens.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.jonopens.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jonopens
 linkedin_username: jopenshaw
 show_excerpts: true
