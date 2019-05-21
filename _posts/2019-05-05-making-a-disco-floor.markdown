@@ -71,7 +71,7 @@ Additionally, I wanted to hand-write a few patterns to use as seed data for user
 So with the reference, the patterns look something like...
 
 ```
-const examplePatternWithNumberReferences = {
+const examplePatternWithNumberReferences   = {
   0: [
     // array for each row of tiles
     [
@@ -84,7 +84,57 @@ const examplePatternWithNumberReferences = {
 };
 ```
 
-Overall, making this choice eased the frustration of writing patterns manually AND helped down the line when writing React components that would handle tile behavior. Each tile variation is referenced with a number from 1-20 when reading and setting patterns. Components that need the patterns import a pattern file and the reference file. Makes sense why Python calls these things dictionaries :/
+Overall, making this choice eased the frustration of writing patterns manually AND helped down the line when writing React components that would handle tile behavior. Each tile variation is referenced with a number from 1-20 when reading and setting patterns. Components that need the patterns import a pattern file and the reference file. 
+
+```
+import { TILE_REFERENCE } from '../data/reference'
+
+// ... component stuff
+
+TILE_REREFENCE[1].color // white
+TILE_REREFENCE[1].isLit // false
+
+```
+
+Starts to make sense why Python calls these things dictionaries :/
+
+### When Should You Break Up Stores?
+
+Another question I grappled with during this project was the correct time to break up stores. At first, I had assumed I'd have two stores - an `AppStore` and a `FloorStore`.
+
+Initially, I thought the AppStore could store some essential UI elements that would exist throughout the disco floor and the FloorStore would manage what I assumed would be the bulk of the logic that belonged to the creation of floor patterns. The early versions of the app were written that way, but as I added more of the features I had planned on, it started to feel more and more unwieldy; the AppStore remained small, the FloorStore was growing quickly.
+
+As a result, I split the FloorStore into the `PlayerStore` and the `BuilderStore`. That felt like a more reasonable division because that accounted for the two largest 'chunks' of functionality: playing patterns and building them.
+
+You might see where this is going, but ultimately, I ended up axing the AppStore altogether. Most of its code has moved into the PlayerStore, and the disco floor is structured based on the two main things the app does.
+
+My gut tells me that I could have planned for this if I'd thought about it more. Regardless, the essential learning that came out of this experience is that **stores should be split along the lines of functionality in an application** and that **there is a critical mass point at which stores ought to be split for the sake of keeping them from growing out of control**.
+
+### Would It Be Faster to Pre-render All Frames and Change z-index?
+
+<img src="/images/overhand-shuffle.gif" alt="best z-index swap analogy I could think of - the overhand shuffle">
+
+I haven't built out a proof of concept to know if this is true, but I'm putting it here from my own curiosity: would I be able to make silly faster player speeds like 8x and 16x if I lazily pre-rendered all the frames and simply swapped the z-indices out?
+
+For context, the speeds I started with were 0.5x, 1x, 2x and 4x. 0.5 speed felt kind of lame, so I swapped it out for an 8x speed! Wooooo SPEEEEEEEED!!!! Speed...? Oh, well, after creating a few more complex patterns, it turns out that my app really struggled with 8x speed. Rerendering was choppy and unreliable, sadly. So instead of ripping the app apart and starting from scratch, I went back to half speed...
+
+It was later that I started to think of the subtitle of this section as a solution to the issue with rerendering lagging behind. Since it takes a little time to start interacting with the app, it might be enough to simply render each frame on a different z-index and swap those values each time a frame ticks. I haven't tested the solution, but it's possible I'll give it a try once I get through all the other features I still want to complete.
+
+Speaking of which...
+
+## Planned Updates & Wrap Up
+
+So what'll be next? I mean, I have a few other projects I'm in the middle of, but I do plan to return to this project and finish it out.
+
+Specifically:
+- a full-fledged mobile experience
+- a color selector in the builder (instead of having to click tiles)
+- row, column and diagonal toggles (think Bingo)
+- option to use the last frame instead of having a fresh start each frame
+
+I initially started this project on a whim to learn some basic Webpack. It's been fun, and my goal has been met. Maybe this isn't as good a wrap up as could be - I'm still new to this whole thing! - but I'll keep trying to share the things I learned. The way a wise friend once told me.
+
+Thanks for reading!
 
 <!-- 
   later updates
