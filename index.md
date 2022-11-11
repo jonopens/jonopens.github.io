@@ -11,4 +11,6 @@ redirect_from:
 
 ---
 
-Hello. I'm Jon, an SEO turned developer. I love to code and to learn. This is a blog where I write about my projects, my learnings and my life. If you want to know more about me, click that `About Me` link in the header. Thanks for stopping by :)
+Hello. I'm Jon, an SEO turned developer. I love to code and to learn. This is a blog where I write about my projects, my learnings and my life. If you want to know more about me, click that `About Me` link in the header. 
+
+Thanks for stopping by!
