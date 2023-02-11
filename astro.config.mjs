@@ -7,6 +7,13 @@ import tailwind from "@astrojs/tailwind";
 import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
+import solidJs from "@astrojs/solid-js";
+
+// https://astro.build/config
+import sitemap from "@astrojs/sitemap";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), partytown()]
+  site: 'https://www.jonopens.com',
+  integrations: [tailwind(), partytown(), solidJs(), sitemap()]
 });
