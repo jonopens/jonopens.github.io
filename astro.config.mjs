@@ -1,13 +1,12 @@
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-import tailwind from "@astrojs/tailwind";
+import prefetch from '@astrojs/prefetch';
 
 // https://astro.build/config
 import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
-import solidJs from "@astrojs/solid-js";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 import sitemap from "@astrojs/sitemap";
@@ -15,5 +14,8 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.jonopens.com',
-  integrations: [tailwind(), partytown(), solidJs(), sitemap()]
+  integrations: [prism(), partytown(), prefetch(), prism(), react(), sitemap()],
+  markdown: {
+    syntaxHighlight: 'prism',
+  }
 });
