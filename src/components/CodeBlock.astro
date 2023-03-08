@@ -1,0 +1,26 @@
+---
+import type { CodeBlockProps } from '../types/components';
+interface Props extends CodeBlockProps {}
+
+import { Prism } from '@astrojs/prism';
+
+const { lang, code, caption } = Astro.props;
+---
+
+<figure class='code-figure'>
+  <Prism lang={lang} code={code} />
+  <figcaption class='code-figure__caption'>{caption}</figcaption>
+</figure>
+
+<style>
+  .code-figure {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .code-figure__caption {
+    padding: 0 0.25rem;
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+</style>

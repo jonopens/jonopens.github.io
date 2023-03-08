@@ -1,8 +1,9 @@
 ---
-import type { BasicProps } from "../types/layouts";
-interface Props extends BasicProps {};
+import type { ExperimentProps } from "../types/layouts";
+interface Props extends ExperimentProps {};
 
-const { title, description, canonicalUrl, ogImageUrl } = Astro.props;
+const { experimentTitle, description, canonicalUrl, libraryUrls } = Astro.props;
+
 ---
 
 <!DOCTYPE html>
@@ -12,10 +13,12 @@ const { title, description, canonicalUrl, ogImageUrl } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <meta name="og:title" content={canonicalUrl} />
-    <meta name="og:image" content={ogImageUrl} />
+    {libraryUrls && libraryUrls.map((url: string) => (
+      <script type="text/partytown" src={url}></script>
+    ))}
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalUrl} />
-		<title>{title}</title>
+		<title>Experiment - {experimentTitle}</title>
 	</head>
 	<body>
 		<slot />

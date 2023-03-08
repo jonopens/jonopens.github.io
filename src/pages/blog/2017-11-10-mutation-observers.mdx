@@ -1,0 +1,92 @@
+---
+layout: post
+title: MutationObserver & Monitoring Changes to the DOM
+h1: Change Monitoring with JavaScript MutationObserver Objects
+description: MutationObserver objects can be useful to act after changes are made to the DOM.
+date: 2017-11-10T08:00:01Z
+slug: /blog/monitoring-changes-with-mutation-observers
+excerpt: "Quick overview of the built-in JavaScript MutationObserver object type and how to use it."
+redirect_from: "/tests/mutation-observer-test.html"
+
+---
+
+Recently at Flatiron, I was building a super-simple SPA (single page application) that consumed an external API and performed some basic operations on the page. My goal was to mimic a JS file pattern I had seen with my instructor where we had an app class managing a lot of functionality, an adaptor class fetching from the API and a DogBreed class to handle the returned objects and their requisite methods.
+
+It was going well and I was getting back objects from a [fun dog API](https://dog.ceo/dog-api/). At least, it was great until I got in a bit over my head trying to attach event listeners to DOM elements I was adding to the page after completing a GET request with `fetch`, and the context of `this` I wanted to preserve was being lost in the process. I started looking for ways to perform actions based on changes to the DOM - enter the MutationObserver class.
+
+## What is a MutationObserver in JavaScript?
+
+As the name suggests, the purpose of mutation observers is, well, to observe. Specifically, DOM elements. And look for mutations. In the DOM elements.
+
+<img src="https://i.pinimg.com/originals/87/6a/2c/876a2cf1cb3ad7547429f031ad493f17.jpg" alt="i am shocked and i want details" width="500">
+
+More specifically, it's a built-in object type that's intended to handle changes performed on the DOM. When an element under observation changes in the DOM, a new MutationRecord is created which carries with it data about the nature of that change. In practice, I only used it to get information on what had been changed via console log.
+
+{% highlight JavaScript %}
+
+let theShadowKnows = new MutationObserver(mutation => {
+  mutation.forEach(mutant => console.log(mutant))
+})  
+
+{% endhighlight %}
+
+We first have to initialize a new instance of the MutationObserver class. That requires one argument - a callback function. In the above case, it's just a console log of a MutationRecord object which is generated when the conditions are met for the observation.
+
+{% highlight HTML %}
+
+<body markdown="0">
+  <div class="no" id="test">
+  <h1>Our glorious H1 tag</h1>
+  <p id="fun-text">some fun text here.</p>
+  <p>some not so fun text here.</p>
+  <p>a third paragraph element.</p>
+  <p id="pro-seo-text" class="super-valuable">optimizing for the term 'glorious H1 tag' and will hopefully rank by 2019.</p>
+  </div>
+</body>
+
+{% endhighlight %}
+
+Let's say that we are given the above HTML. In order to start observing, we need a target and a configuration object (MutationObserverInit) that tells the Observer what should be generated in the MutationRecord instance when something changes in the DOM target.
+
+{% highlight JavaScript %}
+
+let t = document.getElementById('pro-seo-text')
+let conf = {
+  attributes: true,
+  childList: true,
+  characterData: true,
+  attributeOldValue: true
+}   
+
+{% endhighlight %}
+
+The [MDN documentation on MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver#MutationObserverInit#MutationObserverInit) indicates that you need to have one of the first three keys present and set to true in the "conf" (MutationObserverInit) object above set to true or else it won't be valid. Without one of those tree, a TypeError is thrown.
+
+<iframe src="https://www.youtube.com/embed/pC6QUerHk6o" frameborder="0" allowfullscreen width="100%" height="320"></iframe>
+
+To start observing, we pass in the target and conf to the `.observe` method of the instance we created. Once that has happened without incident, we can see the MutationRecords as they are logged to the browser console (at least in my current callback function, that is).
+
+If we wanted to unbind the observer, effectively killing it, we would only need to call:
+
+{% highlight JavaScript %}
+
+theShadowKnows.disconnect()
+
+{% endhighlight %}
+
+## Okay, but WHY Use a MutationObserver?
+
+For a little while, I struggled to find real-world use cases for MutationObservers until I found [this article on Eager.io](https://eager.io/blog/three-real-world-use-cases-for-mutation-observer/) which details (and even demos one) real world value. In particular, observers can capture element as they hit the DOM before they are rendered to make changes that a user wouldn't see but would have a great impact, like optimizing images or a similar value-add situation.
+
+In essence, it seems that a big part of the value of a MutationObserver is that it monitors changes in the DOM itself like attribute changes/additions, new children, new nodes, etc. It's less driven (out of the box, at least) by interaction with those elements on the page.
+
+One other important factor reported in [this post on the Opera dev blog](https://dev.opera.com/articles/mutation-observers-tutorial/) is that an observers are more efficient in some respect than event handlers. In an example given to add 2500 document fragments to a document, the claim is that the event handler is invoked 2500 times but the observer's callback only once. Sadly, the test that was originally used to demonstrate that fact no longer works to confirm.
+
+## MutationObserver is Neat-o, but May Not Be Great for Large Applications
+
+Last thing I wanted to talk about, particularly in the context I mentioned earlier (monitoring all nodes as added to DOM), observing mutations is potentially very expensive as it could happen hundreds of times a second in the correct context. The expense will be dependent on the complexity and the size of the node tree we're observing. [The accepted answer in this StackOverflow question](https://stackoverflow.com/questions/31659567/performance-of-mutationobserver-to-detect-nodes-in-entire-dom/39332340) has some pretty rigorous suggestions for optimization, but for my purposes, this topic requires more study and some benchmarking on an actual application to better determine its viability.
+
+<figure style="text-align: center;">
+  <img src="https://vignette.wikia.nocookie.net/dpwikia/images/8/8f/S03M04_halfa_DNA_mutation.gif/revision/latest?cb=20130722031650" alt="I just wanted to use this somewhere on this post" width="500px">
+  <figcaption>I really wanted to use this cartoon mutation gif.</figcaption>
+</figure>

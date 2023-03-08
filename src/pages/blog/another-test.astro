@@ -1,0 +1,14 @@
+---
+import PostWithCode from "@layouts/PostWithCode.astro";
+import CodeBlock from "@components/CodeBlock.astro";
+---
+
+<PostWithCode title="test" description="test description" canonicalUrl="https://www.example.com" ogImageUrl="">
+  <CodeBlock
+    lang="js"
+    code={`    const potato = 'old maid';
+    console.log(potato.split(' ')[0]);
+    potato.split(' ').map(str => str.toUpperCase());`}
+    caption="test caption for my code"
+  />
+</PostWithCode>
