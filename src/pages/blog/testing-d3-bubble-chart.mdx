@@ -51,9 +51,10 @@ The height and width are self-explanatory, but the svg is kind of neat and follo
 
 Great, now we have an svg in our parent div, and a g in our svg that will hold our child elements. We now need a set of rules for how we will display our bubbles and how they should behave. And, jeez we don't have any data yet! Lots to do, so let's set some more rules.
 
-```JS
-
-// defines the maximum values (domain) and maximum radius values (range) for our circles
+<CodeBlock
+  lang="js"
+  caption="Getting the height and width and making the SVG for our bubble chart"
+  code={`// defines the maximum values (domain) and maximum radius values (range) for our circles
 
 let radiusScale = d3.scaleSqrt().domain([10, 3000]).range([10, 80])
 
@@ -64,9 +65,8 @@ let simulation = d3.forceSimulation()
   .force("y", d3.forceY(height).strength(0.01))
   .force("collide", d3.forceCollide(function(d){
     return radiusScale(d.cost) + 1
-  }))
-
-```
+  }))`}
+/>
 
 As you can see in the comments above, `radiusScale` defines the rules we use to display circles/bubbles by telling it what our min and max values ARE in our data and what they SHOULD BE on the page. Simulation takes a bit more explaining, really more than I can provide, but the short answer is that it's an object that D3 creates that has a bunch of functions we can use later. Neato. Here's what it looks like if we console.log it out...
 
@@ -82,21 +82,22 @@ These all map to positions of our bubbles with respect to the page and with resp
 
 Now we're getting to the good stuff - actually showing some bubbles. To do that we're going to write a couple of functions and use some D3 methods.
 
-```JS
-
-d3.queue()
+<CodeBlock
+  lang="js"
+  caption="Getting the height and width and making the SVG for our bubble chart"
+  code={`d3.queue()
   .defer(d3.csv, "./data.csv")
-  .await(ready)
-
-```
+  .await(ready)`}
+/>
 
 Here we tell D3 to perform actions in a specific order using the `.queue` method. To use the language from the documentation, the queue method "evaluates zero or more deferred asynchronous tasks with configurable concurrency: you control how many tasks run at the same time." That means we can control when things happen. If there were an external API call for instance, we could defer rendering until we had data or some errors to work on.
 
 In our case, we queue up getting our data from our locally-stored CSV and then we will run the callback we gave to the .await method - the `ready` function.
 
-```JS
-
-function ready (error, datapoints) {
+<CodeBlock
+  lang="js"
+  caption="Getting the height and width and making the SVG for our bubble chart"
+  code={`function ready (error, datapoints) {
   let circles = svg.selectAll(".expenses")
     .data(datapoints)
     .enter().append("circle")
@@ -105,15 +106,16 @@ function ready (error, datapoints) {
       return radiusScale(d.cost)
     })
     .attr("fill", "lightblue")
-}
+}`}
 
-```
+/>
 
 We add that function and BOOM... wait, what? Our circles are trapped in the top left corner! See, the issue right now is that even though we have our simulation, we aren't using it. So we need to call it in our ready function.
 
-```JS
-
-simulation.nodes(datapoints)
+<CodeBlock
+  lang="js"
+  caption="Getting the height and width and making the SVG for our bubble chart"
+  code={`simulation.nodes(datapoints)
   .on('tick', ticker)
 
 function ticker() {
@@ -124,8 +126,7 @@ function ticker() {
     .attr("cy", function(d){
       return d.y
     })
-}       
-
-```
+}`}
+/>
 
 Here we write another function, our ticker, which will update the x and y coordinates of our circles as the simulation is run. And that's it! Thanks for stopping by :)
