@@ -16,6 +16,45 @@ const { frontmatter } = Astro.props;
 		<title>{frontmatter.title}</title>
 	</head>
 	<body>
-		<slot />
+		<main>
+			<h1 class="heading">{frontmatter.h1}</h1>
+			<slot />
+		</main>
 	</body>
 </html>
+
+<style>
+	body {
+		font-size: 1.5rem;
+		line-height: 2rem;
+		margin: auto;
+	}
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 90ch;
+		container-type: inline-size;
+	}
+
+	@container (width < 720px) {
+		.heading {
+			font-size: 2.5rem;
+			line-height: 3rem;
+		}
+
+		h2 {
+			font-size: 1.7rem;
+			line-height: 2.2rem;
+		}
+	}
+
+	.heading {
+		font-size: 3rem;
+		line-height: 3.2rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+		line-height: 2.3rem;
+	}
+</style>

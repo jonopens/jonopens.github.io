@@ -1,12 +1,17 @@
 ---
-layout: post
-title:  "React Disco Floor Fever: Making a Disco Floor App"
+layout: ../../layouts/PostWithCode.astro
+slug: /blog/react-disco-floor-app
+title: "React Disco Floor Fever: Making a Disco Floor App"
 h1: Making a React Disco Floor Maker
 description: "At the end of last year, I had the idea to make a Disco Floor making app. I finally got around to completing the first version. It's missing a lot but I've enjoyed it a ton and wanted to pull some thoughts together on it."
+ogImageUrl:
 date: 2019-05-20T08:00:01Z
-slug: /blog/react-disco-floor-app
 excerpt: "A disco floor app I'm working on that has no real rhyme or reason other than it seemed like an interesting challenge. Just finished what I would call version 1.0.0 and taking a break for a bit."
+
 ---
+
+import CodeBlock from '../../components/CodeBlock.astro';
+import { Image } from '@astrojs/image/components';
 
 I've been doing software development as a frontend engineer for CARFAX's Used Car Listings product for almost a year now. In large part, I didn't want to pick up new projects so I could focus on growing into my new career, and it's been a fantastic first (almost) year! However, near the end of 2018, I started getting the itch for a new project and was feeling more comfortable at work, so I started wondering about another project. Something silly and fun, ideally!
 
@@ -41,8 +46,10 @@ Over the course of the ~4 months where I was on again, off again writing the dis
 
 One of the initial questions that I struggled with was how best to represent the basic structure of a disco pattern. A two-dimensional array made the most sense for a matrix-like object like a tiled floor, but that's only a single frame. A 'pattern' in the way a disco floor works would be a series of frames - something like `Pattern --< Frame --< Tile`. In other words, the representation needs more depth, so the Disco Floor app opts to have each pattern represented as an object, each frame represented as a unique, numerical key pointing to a two-dimensional array value.
 
-```
-const examplePatternWithTileObjects = {
+<CodeBlock
+  lang="js"
+  caption="Getting the height and width and making the SVG for our bubble chart"
+  code={`const examplePatternWithTileObjects = {
   0: [
     // array for each row of tiles
     [
@@ -52,25 +59,28 @@ const examplePatternWithTileObjects = {
   1: [
     // etc
   ],
-};
-```
+};`}
+/>
 
 Further, each tile is defined as an object having two key-value pairs that would be referenced during UI interactions - `color` and `isLit`.
 
-
-```
-const exampleTile = {
+<CodeBlock
+  lang="js"
+  caption="Getting the height and width and making the SVG for our bubble chart"
+  code={`const exampleTile = {
   color: 'green',
   isLit: true,
-};
-```
+};`}
+/>
 
-Additionally, I wanted to hand-write a few patterns to use as seed data for users to play with. It ended up being pretty **frustrating** and **time-consuming** to write as they got more complex and longer; I needed an abstraction to make it easier to write them from scratch (and is it turned out later, change them). A [reference object](https://github.com/jonopens/disco-floor/blob/master/src/data/reference.js) (<== links to Github reference file) with a limited number of tiles (20) helped simplify things.
+Additionally, I wanted to hand-write a few patterns to use as seed data for users to play with. It ended up being pretty **frustrating** and **time-consuming** to write as they got more complex and longer; I needed an abstraction to make it easier to write them from scratch (and is it turned out later, change them). A [reference object](https://github.com/jonopens/disco-floor/blob/master/src/data/reference.js) ({'<=='} links to Github reference file\) with a limited number of tiles (20) helped simplify things.
 
 So with the reference, the patterns look something like...
 
-```
-const examplePatternWithNumberReferences   = {
+<CodeBlock
+  lang="js"
+  caption="Getting the height and width and making the SVG for our bubble chart"
+  code={`const examplePatternWithNumberReferences = {
   0: [
     // array for each row of tiles
     [
@@ -80,20 +90,21 @@ const examplePatternWithNumberReferences   = {
   1: [
     // etc
   ],
-};
-```
+};`}
+/>
 
 Overall, making this choice eased the frustration of writing patterns manually AND helped down the line when writing React components that would handle tile behavior. Each tile variation is referenced with a number from 1-20 when reading and setting patterns. Components that need the patterns import a pattern file and the reference file. 
 
-```
-import { TILE_REFERENCE } from '../data/reference'
+<CodeBlock
+  lang="js"
+  caption="Getting the height and width and making the SVG for our bubble chart"
+  code={`import { TILE_REFERENCE } from '../data/reference'
 
 // ... component stuff
 
 TILE_REREFENCE[1].color // white
-TILE_REREFENCE[1].isLit // false
-
-```
+TILE_REREFENCE[1].isLit // false`}
+/>
 
 Starts to make sense why Python calls these things dictionaries :/
 
@@ -111,7 +122,13 @@ My gut tells me that I could have planned for this if I'd thought about it more.
 
 ### Would It Be Faster to Pre-render All Frames and Change z-index?
 
-<img src="/images/overhand-shuffle.gif" alt="best z-index swap analogy I could think of - the overhand shuffle">
+<Image
+  src="/overhand-shuffle.gif"
+  alt="best z-index swap analogy I could think of - the overhand shuffle"
+  width={480}
+  aspectRatio="4:3"
+  format="gif"
+/>
 
 I haven't built out a proof of concept to know if this is true, but I'm putting it here from my own curiosity: would I be able to make silly faster player speeds like 8x and 16x if I lazily pre-rendered all the frames and simply swapped the z-indices out?
 
@@ -134,11 +151,3 @@ Specifically:
 I initially started this project on a whim to learn some basic Webpack. It's been fun, and my goal has been met. Maybe this isn't as good a wrap up as could be - I'm still new to this whole thing! - but I'll keep trying to share the things I learned. The way a wise friend once told me.
 
 Thanks for reading!
-
-<!-- 
-  later updates
-  - mobile experience exists and is good
-  - row, column, diagonal toggle
-  - color selector
-  - "fresh start" frame (current) vs. last frame frame
--->

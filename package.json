@@ -19,7 +19,8 @@
 		"@astrojs/react": "^2.0.2",
 		"@astrojs/sitemap": "^1.0.1",
 		"@fontsource/bitter": "^4.5.11",
-		"astro": "^2.0.18"
+		"astro": "^2.0.18",
+		"sharp": "^0.31.3"
 	},
 	"devDependencies": {
 		"@typescript-eslint/parser": "^5.51.0",

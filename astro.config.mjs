@@ -9,9 +9,18 @@ import mdx from "@astrojs/mdx";
 
 export default defineConfig({
   site: 'https://www.jonopens.com',
-  integrations: [partytown(), prefetch(), react(), sitemap(), image(), mdx({
-    drafts: true,
-  })],
+  integrations: [
+    partytown(),
+    prefetch(),
+    react(),
+    sitemap(),
+    image({
+      serviceEntryPoint: '@astrojs/image/sharp',
+    }), 
+    mdx({
+      drafts: true,
+    }),
+  ],
   markdown: {
     syntaxHighlight: 'prism',
     drafts: true,

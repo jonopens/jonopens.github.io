@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/PostWithCode.astro
 slug: /blog/testing-d3-bubble-chart
-title:  Simple Bubble Chart in D3.js
-h1: Bubble Chart with Simulated Forces in D3.js
+title: Simple Bubble Chart in D3.js
+h1: Simple Bubble Chart w. Simulated Forces in D3.js
 description: Quick guide on getting a simple bubble chart set up in D3.js.
 ogImageUrl: 
 date: 2017-10-20T08:00:01Z
@@ -10,9 +10,18 @@ excerpt: "I have a background in analytics and data visualization, so I made a b
 ---
 
 import CodeBlock from '../../components/CodeBlock.astro';
+import { Picture } from '@astrojs/image/components';
 
-<img src="https://media.giphy.com/media/i6X9HbM4bhJ8Q/giphy.gif" alt="Data the android doing weird stuff" width="500px" />
+export const imageUrl = 'https://media.giphy.com/media/i6X9HbM4bhJ8Q/giphy.gif';
 
+{/* 
+<Picture
+  src={imageUrl}
+  alt="Data the android doing weird stuff"
+  widths={[380,500]}
+  aspectRatio="1:1"
+/>
+*/}
 I've been hearing about the visualization library called D3 since before I even knew anything about JavaScript beyond simple DOM manipulation in JQuery. That's because I've done a lot of work around drawing conclusions from data for years during my time as an SEO. It's obvious to say, but making sense of your data is absolutely essential. That said, what does that data matter if it can't communicate and be understood? D3, which stands for Data-Driven Documents, can help our data find its voice.
 
 ## Before We Go Further
@@ -29,7 +38,7 @@ Before we can start writing our JS, we need a few things:
 - A div (or other element) with a unique id to add our chart into
 So we add `script` tag to the head of our HTML that points to any publicly hosted version of D3 v4.11, we mock some data in a CSV and we add an id of "chart" to our div. Now we're ready to get started writing our JS.
 
-## Breaking the JavaScript of our Bubble Chart
+## Breaking Down the JavaScript of our Bubble Chart
 First, we're going to wrap everything in an IIFE (immediately invoked function expression) for easy packaging. It's going to prevent the variables from being hoisted. In this example we probably don't care - there's no sensitive data to speak of - but it was in the video I followed so I went with it.
 
 Anyway, we have an IIFE and we'll assign a few variables: height, width, and svg.
@@ -37,7 +46,8 @@ Anyway, we have an IIFE and we'll assign a few variables: height, width, and svg
 <CodeBlock
   lang="js"
   caption="Getting the height and width and making the SVG for our bubble chart"
-  code={`let width  = window.innerWidth, height = window.innerHeight;
+  code={`let width = window.innerWidth,
+    height = window.innerHeight;
 
 let svg = d3.select("#chart")
   .append("svg")
@@ -49,7 +59,7 @@ let svg = d3.select("#chart")
 
 The height and width are self-explanatory, but the svg is kind of neat and follows familiar DOM manipulation patterns in Vanilla JS. Once I realized that, it clarified things a lot. Anyway, we find the HTML element we want (the div with id="chart"), and we append an svg element. We then give that svg some attributes. That SVG gets a g element appended to it. That g is like a container for the chart elements we'll render out later on.
 
-Great, now we have an svg in our parent div, and a g in our svg that will hold our child elements. We now need a set of rules for how we will display our bubbles and how they should behave. And, jeez we don't have any data yet! Lots to do, so let's set some more rules.
+Great, now we have an svg in our parent div, and a `g` in our svg that will hold our child elements. We now need a set of rules for how we will display our bubbles and how they should behave. And, jeez we don't have any data yet! Lots to do, so let's set some more rules.
 
 <CodeBlock
   lang="js"
@@ -70,7 +80,13 @@ let simulation = d3.forceSimulation()
 
 As you can see in the comments above, `radiusScale` defines the rules we use to display circles/bubbles by telling it what our min and max values ARE in our data and what they SHOULD BE on the page. Simulation takes a bit more explaining, really more than I can provide, but the short answer is that it's an object that D3 creates that has a bunch of functions we can use later. Neato. Here's what it looks like if we console.log it out...
 
-![console.log of D3 simulation object](/console-log-simulation-object.png "D3 simulation object in JS console")
+<Picture
+  src="/console-log-simulation-object.png" 
+  alt="D3 simulation object in JS console"
+  widths={[380,628]}
+  aspectRatio={16/9}
+  class=""
+/>
 
 More broadly, the simulation object is going to simulate forces acting on our bubbles. You can see in each of the `.force` lines, we give a name and then we tell the code what kind of force we want to simulate. We have three here:
 

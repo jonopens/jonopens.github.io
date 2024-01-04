@@ -13,9 +13,24 @@ const { lang, code, caption } = Astro.props;
 </figure>
 
 <style>
+  figure {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
+
+  @container (width < 480px) {
+    .code-figure__caption {
+      font-size: 1rem;
+    }
+  }
+
   .code-figure {
+    container-type: normal;
     display: flex;
     flex-direction: column;
+    margin: 0.5rem;
   }
   
   .code-figure__caption {
